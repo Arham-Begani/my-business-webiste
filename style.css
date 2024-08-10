@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;  
+  scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+  min-height: 230vh;
+  background-color: #000;
+  
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 90px;
+    z-index: 999;
+    transition: 0.6s;
+}
+
+
+
+.container_txt .section-main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 200px 100px;
+    font-size: 4vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
+    color: rgba(255, 255, 255, 0.856);
+    font-family: 'Courier New', monospace;
+}
+
+.container{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2vw;
+    bottom: 220px;
+    left: 100px;
+    font-weight: 800;
+}
+
+.container span{
+    position: relative;
+}
+
+.container span::before{
+    content: "Coder";
+    color: aqua;
+    animation: words 20s infinite;
+}
+
+.container span::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    border-left: -1px solid aqua;
+    right: -8px;
+    animation: cursor 0.3s infinite, typing 20s steps(14) infinite;
+}
+
+ @keyframes cursor {
+    to{
+        border-left: 2px solid aqua;
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "Websites";
+    }
+    21%,40%{
+        content: "Portfolios";
+    }
+    41%,60%{
+        content: "Websites";
+    }
+    61%,80%{
+        content: "Designing";
+    }
+    81%,100%{
+        content: "UI/UX";
+}
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+header.sticky{
+    background-color: #37B7C3;
+    padding: 10px 80px;
+    }
+
+header .brand{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    }
+
+header .brand:hover{
+    text-decoration: underline;
+    
+}
+
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 30px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    transition: 0.3s;
+    transition-property: color, background;
+}
+
+header .menu a:hover{
+    color: #000;
+    background: #fff;
+}
+
+header .btn{
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+.section-two {
+    min-height: 100vh;
+    background: #222;
+    padding: 20px 100px;
+}
+
+.section-two h2{
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 30px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.section-two p {
+    font-size: 18px;
+    margin: 30px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1024px) {
+    header .btn{
+      display: block;
+    }
+  
+    header .menu.active{
+      right: 0;
+    }
+  
+    header .menu{
+      position: fixed;
+      background: #a81b24;
+      flex-direction: column;
+      min-width: 400px;
+      height: 100vh;
+      top: 0;
+      right: -100%;
+      padding: 80px 50px;
+      transition-property: right;
+      transition: 0.5s;
+    }
+  
+    header .menu .close-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 25px;
+    }
+  
+    header .menu a{
+      display: block;
+      font-size: 16px;
+      margin: 20px;
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .section-main h1{
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+
+.about_container{
+    flex-wrap: wrap;
+}
+
+.about-me{
+    position: relative;
+    color: #fff;
+    font-size: 4vw;
+    font-weight: 700;
+    justify-items: left;
+    align-items: left;
+    max-width: fit-content;
+    margin-inline: auto;
+    text-decoration: underline #37B7C3;
+    text-underline-offset: 10px;
+    padding: 100px; 
+    
+    
+}
+
+.about-txt{
+    color: #fff;
+    font-size: 18px;
+    justify-items: left;
+    align-items: left;
+    margin: 30px;
+    float: left;
+}
+
+.about_container img{
+    size: 1000px;
+}
+
+.img_container{
+    color: #fff;
+    
+}
+
+#about-me img{
+    position: relative;
+    display: block;
+    left: 100px;
+    width: 400px;
+    overflow: hidden;
+    z-index: 1;
+    max-width: 100%;  
+    height: auto;
+    display: block;
+    transition: transform 0.4s;
+    overflow: hidden;
+    
+}
+
+#about-me img:hover{
+    transform: scale(1.2)
+}

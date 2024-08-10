@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arham Begani</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="" class="brand">SEGUILA</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="#">Home</a>
+        <a href="#about-me">About us</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>  
+
+    <div class="container_txt">
+        <section class="section-main">
+        The Secret of Getting Ahead Is Getting started
+        </section>
+        
+    </div>
+
+    <div class="container">
+        Lets get started with <span class="auto-type"></span>
+    </div>
+
+
+    <div id="about-me">
+        <p class="about-me">About Seguila</p>
+        <p class="about-txt" class="abt_img">Lorem, ipsum dolor sit amet consectetur adipisicing elit.Illo esse ullam natus<br> assumenda a deserunt harum consequuntur, nihil culpa exercitationem facere<br> temporibus. In voluptas saepe aspernatur nemo ducimus quas.</p>    
+        <img src="img/download.jfif">
+        <div class="img_container"></div>
+    </div>
+    
+    <script>
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle('sticky', window.scrollY > 0);
+      });
+
+      var menu = document.querySelector('.menu');
+      var menuBtn = document.querySelector('.menu-btn');
+      var closeBtn = document.querySelector('.close-btn');
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.add('active');
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menu.classList.remove('active');
+      });
+    </script>
+
+<script src="script.js"></script>
+
+  </body>
+</html>
